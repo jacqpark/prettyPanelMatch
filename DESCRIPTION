@@ -1,0 +1,20 @@
+Package: prettyPanelMatch
+Title: ggplot2-Based Visualization for PanelMatch Results
+Version: 0.1.0
+Authors@R:
+    person("Jihye", "Park", email = "Jihye.Park@unige.ch", role = c("aut", "cre"))
+Description: Provides ggplot2-based plotting functions for PanelMatch/PanelEstimate
+    results. Converts PanelEstimate summary objects into tidy data frames and
+    produces customizable coefficient plots with support for multiple models,
+    moderator subgroups, and significance indicators.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    ggplot2 (>= 3.4.0),
+    dplyr,
+    rlang
+Suggests:
+    PanelMatch,
+    testthat (>= 3.0.0)
