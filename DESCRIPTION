@@ -1,5 +1,5 @@
 Package: prettyPanelMatch
-Title: ggplot2-Based Visualization for PanelMatch Results
+Title: ggplot2-Based Visualization for PanelMatch (Imai et al. 2023) Results
 Version: 0.1.0
 Authors@R:
     person("Jihye", "Park", email = "Jihye.Park@unige.ch", role = c("aut", "cre"))

@@ -1,6 +1,6 @@
 # prettyPanelMatch
 
-ggplot2-based plotting for `PanelMatch` results. Replaces manual data wrangling with a simple 2-function workflow.
+ggplot2-based plotting for `PanelMatch` (Imai et al. 2023) results. Replaces manual data wrangling with a simple 2-function workflow.
 
 ## Install
 
