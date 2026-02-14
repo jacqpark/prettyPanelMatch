@@ -5,11 +5,7 @@ ggplot2-based plotting for `PanelMatch` results. Replaces manual data wrangling 
 ## Install
 
 ```r
-# From local source
-devtools::install("path/to/prettyPanelMatch")
-
-# Or from GitHub (if you push it there)
-# devtools::install_github("yourname/prettyPanelMatch")
+devtools::install_github("jacqpark/prettyPanelMatch")
 ```
 
 ## Usage
