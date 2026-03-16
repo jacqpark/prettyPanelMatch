@@ -11,7 +11,8 @@
 ## Test environments
 
 * local macOS (aarch64-apple-darwin20), R 4.3.3
-* win-builder (x86_64-w64-mingw32), R 4.5.2 Patched
+* win-builder (x86_64-w64-mingw32), R 4.5.2 Patched (R-release)
+* win-builder (x86_64-w64-mingw32), R-devel (2026-03-15 r89634 ucrt)
 
 ## Downstream dependencies
 
