@@ -42,6 +42,10 @@
 #' )
 #' }
 #'
+#' @seealso \code{\link{ggplot_panel_estimate}} to plot the result,
+#'   \code{\link{pretty_placebo_test}} for placebo test results,
+#'   \code{\link{pretty_covariate_balance}} for covariate balance.
+#'
 #' @importFrom dplyr bind_rows
 #' @export
 tidy_panel_estimate <- function(..., labels = NULL) {

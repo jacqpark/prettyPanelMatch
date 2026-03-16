@@ -61,6 +61,10 @@
 #' ggplot_panel_estimate(combined, footnote = NULL)
 #' }
 #'
+#' @seealso \code{\link{tidy_panel_estimate}} to prepare the input data,
+#'   \code{\link{gg_placebo_test}} for placebo test plots,
+#'   \code{\link{gg_covariate_balance}} for covariate balance plots.
+#'
 #' @importFrom ggplot2 ggplot aes geom_point geom_errorbar geom_hline labs
 #'   theme_minimal position_dodge scale_shape_manual facet_wrap autoplot
 #' @importFrom rlang .data
