@@ -1,0 +1,10 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.DS_Store$
+^README\.Rmd$
+^LICENSE\.md$
+^cran-comments\.md$
+^\.github$
+^covariate_balance_plot\.png$
+^prettyPanelMatch\.Rcheck$
+^prettyPanelMatch.*\.tar\.gz$
