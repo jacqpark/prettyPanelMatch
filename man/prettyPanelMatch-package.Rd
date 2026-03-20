@@ -4,9 +4,9 @@
 \name{prettyPanelMatch-package}
 \alias{prettyPanelMatch}
 \alias{prettyPanelMatch-package}
-\title{prettyPanelMatch: ggplot2-Based Visualization for PanelMatch (Imai et al. 2023) Results}
+\title{prettyPanelMatch: 'ggplot2'-Based Visualization for 'PanelMatch' (Imai, Kim, Wang 2023) Results}
 \description{
-Provides ggplot2-based plotting functions for PanelMatch results. Tidy-and-plot function pairs for three PanelMatch outputs: treatment effect estimates (PanelEstimate), placebo test diagnostics (placebo_test), and covariate balance checks (get_covariate_balance). Supports multiple models, significance indicators, faceted balance grids, and full ggplot2 extensibility.
+Provides 'ggplot2'-based plotting functions for 'PanelMatch' (Imai, Kim, Wang (2023) \doi{10.1111/ajps.12685}) results. Tidy-and-plot function pairs for three 'PanelMatch' outputs: treatment effect estimates (PanelEstimate()), placebo test diagnostics (placebo_test()), and covariate balance checks (get_covariate_balance()). Supports multiple models, significance indicators, faceted balance grids, and full 'ggplot2' extensibility.
 
 Provides tidy-and-plot function pairs for three types of PanelMatch output:
 treatment effect estimates, placebo test estimates, and covariate balance
@@ -43,6 +43,14 @@ placebo test estimates}
 }
 }
 
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/jacqpark/prettyPanelMatch}
+  \item Report bugs at \url{https://github.com/jacqpark/prettyPanelMatch/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Jihye Park \email{Jihye.Park@unige.ch}
 

@@ -19,21 +19,19 @@
 #' @return A \code{ggplot} object.
 #'
 #' @examples
-#' \dontrun{
-#' # Single model
-#' pretty_placebo_test(pt, labels = "My Model") |>
-#'   gg_placebo_test()
-#'
-#' # Multiple models with custom shapes
-#' combined <- pretty_placebo_test(
-#'   "Energy Dept." = pt_energy,
-#'   "State Dept."  = pt_state
+#' # Toy example (runs without PanelMatch)
+#' toy <- data.frame(
+#'   term      = factor(paste0("t-", 3:1), levels = paste0("t-", 3:1), ordered = TRUE),
+#'   estimate  = c(0.1, -0.05, 0.02),
+#'   std.error = c(0.15, 0.12, 0.10),
+#'   conf.low  = c(-0.19, -0.29, -0.18),
+#'   conf.high = c(0.39, 0.19, 0.22),
+#'   label     = factor("Model", ordered = TRUE),
+#'   signif    = c("Non-signif", "Non-signif", "Non-signif"),
+#'   stringsAsFactors = FALSE
 #' )
-#' gg_placebo_test(combined, shapes = c("circle", "diamond"))
-#'
-#' # Override any ggplot_panel_estimate argument
-#' gg_placebo_test(combined, facet_by = "label", footnote = NULL)
-#' }
+#' class(toy) <- c("ppm_placebo_tidy", "data.frame")
+#' gg_placebo_test(toy)
 #'
 #' @seealso \code{\link{pretty_placebo_test}} to prepare the input data,
 #'   \code{\link{ggplot_panel_estimate}} for treatment effect plots.

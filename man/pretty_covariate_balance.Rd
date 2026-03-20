@@ -46,21 +46,17 @@ stage, e.g., before matching, after matching pre-refinement,
 post-refinement). The argument names become model/row facet labels.
 }
 \examples{
-\dontrun{
-# Three stages per model
-cov_data <- pretty_covariate_balance(
-  "Cong-FIN; US finan" = list(cov_nomatch, cov_matched, cov_refined),
-  "Cong-FIN; US banks" = list(cov_nomatch2, cov_matched2, cov_refined2),
-  dv = c("congress_fin")
+# Create a mock covariate balance matrix (rows = time, cols = variables)
+mat <- matrix(
+  c(0.3, -0.1, 0.5, 0.2, 0.8, 0.1),
+  nrow = 3,
+  dimnames = list(NULL, c("outcome", "covar1"))
 )
-
-# Single stage
 pretty_covariate_balance(
-  "My Model" = cov_matrix,
+  "My Model" = mat,
   stage_labels = "Before matching",
-  dv = "outcome_var"
+  dv = "outcome"
 )
-}
 
 }
 \seealso{

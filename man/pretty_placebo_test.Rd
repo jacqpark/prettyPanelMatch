@@ -35,20 +35,15 @@ Converts one or more \code{placebo_test()} results from the PanelMatch
 package into a single tidy data frame suitable for ggplot2 plotting.
 }
 \examples{
-\dontrun{
-pt <- placebo_test(pm.sets, data = mydata, placebo.lead = 0,
-                   number.iterations = 1000)
-pretty_placebo_test(pt, labels = "My Model")
-
-# Multiple models (names become labels)
-pretty_placebo_test(
-  "Energy Dept." = pt_energy,
-  "State Dept."  = pt_state
+# Create a mock placebo_test result
+pt <- list(
+  estimates = c("t-3" = 0.10, "t-2" = -0.05, "t-1" = 0.02),
+  standard.errors = c("t-3" = 0.15, "t-2" = 0.12, "t-1" = 0.10)
 )
+pretty_placebo_test(pt, labels = "My Model")
 
 # Custom confidence level
 pretty_placebo_test(pt, confidence_level = 0.90)
-}
 
 }
 \seealso{

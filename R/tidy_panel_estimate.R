@@ -23,24 +23,25 @@
 #'   }
 #'
 #' @examples
-#' \dontrun{
-#' # Single model
-#' tidy_panel_estimate(summary(pe), labels = "My Model")
-#'
-#' # Multiple models
-#' tidy_panel_estimate(
-#'   summary(pe.results_e1[[1]]),
-#'   summary(pe.results_e2[[1]]),
-#'   summary(pe.results_e3[[1]]),
-#'   labels = c("Energy Dept.", "State Dept.", "Congress")
+#' # Create a mock PanelEstimate summary (matrix with 4 columns)
+#' pe_sum <- matrix(
+#'   c(0.5, 0.2, 0.1, 0.9,
+#'     0.8, 0.3, 0.2, 1.4,
+#'     1.2, 0.25, 0.7, 1.7),
+#'   nrow = 3, byrow = TRUE,
+#'   dimnames = list(NULL, c("Estimate", "Std.Error", "lower", "upper"))
 #' )
+#' tidy_panel_estimate(pe_sum, labels = "My Model")
 #'
-#' # Named arguments (names become labels automatically)
-#' tidy_panel_estimate(
-#'   "Energy Dept." = summary(pe.results_e1[[1]]),
-#'   "State Dept."  = summary(pe.results_e2[[1]])
+#' # Multiple models with named arguments
+#' pe_sum2 <- matrix(
+#'   c(0.3, 0.15, 0.0, 0.6,
+#'     0.6, 0.20, 0.2, 1.0,
+#'     0.9, 0.18, 0.5, 1.3),
+#'   nrow = 3, byrow = TRUE,
+#'   dimnames = list(NULL, c("Estimate", "Std.Error", "lower", "upper"))
 #' )
-#' }
+#' tidy_panel_estimate("Model A" = pe_sum, "Model B" = pe_sum2)
 #'
 #' @seealso \code{\link{ggplot_panel_estimate}} to plot the result,
 #'   \code{\link{pretty_placebo_test}} for placebo test results,

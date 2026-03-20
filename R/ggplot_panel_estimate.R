@@ -43,23 +43,19 @@
 #'   standard ggplot2 syntax.
 #'
 #' @examples
-#' \dontrun{
-#' # Single model
-#' tidy_panel_estimate(summary(pe1), labels = "My Model") |>
-#'   ggplot_panel_estimate()
-#'
-#' # Multiple models with custom hollow shapes
-#' combined <- tidy_panel_estimate(
-#'   "Energy Dept." = summary(pe1[[1]]),
-#'   "State Dept."  = summary(pe2[[1]]),
-#'   "Congress"     = summary(pe3[[1]]),
-#'   "EOP"          = summary(pe4[[1]])
+#' # Toy example (runs without PanelMatch)
+#' toy <- data.frame(
+#'   term      = factor(paste0("t+", 0:2), levels = paste0("t+", 0:2), ordered = TRUE),
+#'   estimate  = c(0.5, 0.8, 1.2),
+#'   std.error = c(0.2, 0.3, 0.25),
+#'   conf.low  = c(0.1, 0.2, 0.7),
+#'   conf.high = c(0.9, 1.4, 1.7),
+#'   label     = factor("Model", ordered = TRUE),
+#'   signif    = c("Non-signif", "Signif", "Signif"),
+#'   stringsAsFactors = FALSE
 #' )
-#' ggplot_panel_estimate(combined, shapes = c("circle", "diamond", "triangle", "square"))
-#'
-#' # Suppress footnote
-#' ggplot_panel_estimate(combined, footnote = NULL)
-#' }
+#' class(toy) <- c("ppm_tidy", "data.frame")
+#' ggplot_panel_estimate(toy)
 #'
 #' @seealso \code{\link{tidy_panel_estimate}} to prepare the input data,
 #'   \code{\link{gg_placebo_test}} for placebo test plots,

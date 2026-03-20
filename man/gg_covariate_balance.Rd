@@ -78,21 +78,19 @@ The default layout uses \code{facet_grid(model ~ stage)}, where models
 columns, reproducing the standard PanelMatch covariate-balance diagnostic.
 }
 \examples{
-\dontrun{
-cov_data <- pretty_covariate_balance(
-  "Cong-FIN; US finan" = list(cov1, cov2, cov3),
-  "Cong-BAN; US finan" = list(cov4, cov5, cov6),
-  dv = c("congress_fin", "congress_ban")
+# Toy example (runs without PanelMatch)
+toy <- data.frame(
+  model    = factor("Model A", ordered = TRUE),
+  stage    = factor("Before matching", ordered = TRUE),
+  time     = factor(rep(paste0("t-", 3:1), 2),
+                    levels = paste0("t-", 3:1), ordered = TRUE),
+  variable = factor(rep(c("outcome", "covar1"), each = 3), ordered = TRUE),
+  estimate = c(0.3, 0.5, 0.8, -0.1, 0.2, 0.1),
+  is_dv    = rep(c(TRUE, FALSE), each = 3),
+  stringsAsFactors = FALSE
 )
-gg_covariate_balance(cov_data)
-
-# With legend and custom colors
-gg_covariate_balance(cov_data, show_legend = TRUE, cov_color = "grey50")
-
-# Add a vertical line at the last pre-treatment period
-gg_covariate_balance(cov_data) +
-  geom_vline(xintercept = 3, lty = "dashed")
-}
+class(toy) <- c("ppm_cov_tidy", "data.frame")
+gg_covariate_balance(toy)
 
 }
 \seealso{
