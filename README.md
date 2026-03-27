@@ -4,6 +4,14 @@ ggplot2-based plotting for `PanelMatch` (Imai et al. 2023) results. Tidy-and-plo
 
 ## Install
 
+`prettyPanelMatch` is available on CRAN and can be installed using:
+
+```r
+install.packages("prettyPanelMatch")
+```
+
+Alternatively, you can download the latest development version of this package using the `devtools` package:
+
 ```r
 devtools::install_github("jacqpark/prettyPanelMatch")
 ```
